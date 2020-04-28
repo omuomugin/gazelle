@@ -14,7 +14,7 @@ import config from '../config.local.json'
 jest.setTimeout(120000)
 
 function sleep(ms: number) {
-  return new Promise(resolve => {
+  return new Promise((resolve) => {
     setTimeout(resolve, ms)
   })
 }
@@ -114,8 +114,6 @@ describe('light client', () => {
       config: config as any,
       aggregatorEndpoint
     })
-    await aliceLightClient.start()
-    await bobLightClient.start()
   })
 
   afterEach(async () => {

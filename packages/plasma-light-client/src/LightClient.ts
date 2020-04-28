@@ -227,7 +227,7 @@ export default class LightClient {
   /**
    * start LightClient process.
    */
-  public async start() {
+  private async start() {
     this.commitmentContract.subscribeBlockSubmitted(
       async (blockNumber, root) => {
         console.log('new block submitted event:', root.toHexString())
