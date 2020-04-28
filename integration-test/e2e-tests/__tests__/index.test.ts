@@ -61,7 +61,7 @@ describe('light client', () => {
       abi,
       lightClient['wallet']['ethersWallet']
     )
-    const balance = await connection.getBalance(lightClient.address)
+    const balance = await connection.balanceOf(lightClient.address)
     return formatUnits(balance, 18)
   }
 
