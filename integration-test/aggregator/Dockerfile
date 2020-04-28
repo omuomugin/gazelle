@@ -11,6 +11,7 @@ RUN npm run build
 # start aggregator process
 WORKDIR /HOME/aggregator
 COPY ./integration-test/aggregator .
+RUN cp -n .sample.env .env
 
 RUN npm i
 RUN npm run build
