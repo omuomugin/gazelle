@@ -134,7 +134,7 @@ export default class LightClient {
     const depositedRangeDb = await witnessDb.bucket(
       Bytes.fromString('depositedRange')
     )
-    return new LightClient(
+    const client = new LightClient(
       options.wallet,
       options.witnessDb,
       options.adjudicationContract,
@@ -149,6 +149,8 @@ export default class LightClient {
       options.deciderConfig,
       options.aggregatorEndpoint
     )
+    await client.start()
+    return client
   }
 
   public ownershipProperty(owner: Address): Property {
@@ -233,7 +235,7 @@ export default class LightClient {
         this.verifyPendingStateUpdates(blockNumber)
       }
     )
-    await this.commitmentContract.startWatchingEvents()
+    this.commitmentContract.startWatchingEvents()
     const blockNumber = await this.commitmentContract.getCurrentBlock()
     await this.syncStateUntill(blockNumber)
     await this.watchAdjudicationContract()
