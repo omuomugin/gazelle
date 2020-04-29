@@ -50,7 +50,7 @@
     "@cryptoeconomicslab/primitives": "file:../wakkanay/packages/primitives",
     "@sentry/node": "^5.15.0",
     "dotenv": "^8.2.0",
-    "ethers": "^4.0.46",
+    "ethers": "4.0.47",
     "pg": "^7.18.2",
     "tslib": "^1.11.1"
   },

@@ -32,7 +32,7 @@
     "@cryptoeconomicslab/signature": "^0.3.4",
     "@cryptoeconomicslab/wallet": "^0.3.4",
     "bignumber.js": "^9.0.0",
-    "ethers": "^4.0.46",
+    "ethers": "4.0.47",
     "jsbi": "^3.1.2"
   },
   "devDependencies": {

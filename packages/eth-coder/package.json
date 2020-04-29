@@ -36,7 +36,7 @@
     "@cryptoeconomicslab/primitives": "^0.0.5"
   },
   "dependencies": {
-    "ethers": "^4.0.46",
+    "ethers": "4.0.47",
     "jsbi": "^3.1.2"
   },
   "gitHead": "21764a1554bc98825f094d8ce514e9799a391e5d"

@@ -35,7 +35,7 @@
     "@cryptoeconomicslab/plasma-light-client": "file:../wakkanay/packages/plasma-light-client",
     "@cryptoeconomicslab/primitives": "file:../wakkanay/packages/primitives",
     "dotenv": "^8.2.0",
-    "ethers": "^4.0.46",
+    "ethers": "4.0.47",
     "jsbi": "^3.1.2",
     "tslib": "^1.11.1"
   },
