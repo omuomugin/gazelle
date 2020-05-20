@@ -80,7 +80,7 @@ export class AdjudicationContract implements IAdjudicationContract {
     gameId: Bytes,
     challengingGameId: Bytes
   ): Promise<void> {
-    return await this.connection.decideClaimToTrue(
+    return await this.connection.decideClaimToFalse(
       gameId.toHexString(),
       challengingGameId.toHexString(),
       {
@@ -120,7 +120,7 @@ export class AdjudicationContract implements IAdjudicationContract {
     challengeInputs: List<Bytes>,
     challengingGameId: Bytes
   ): Promise<void> {
-    return await this.connection.removeChallenge(
+    return await this.connection.challenge(
       gameId.toHexString(),
       challengeInputs.data.map(challengeInput => challengeInput.toHexString()),
       challengingGameId.toHexString(),
